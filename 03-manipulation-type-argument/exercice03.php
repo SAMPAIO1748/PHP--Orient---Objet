@@ -68,7 +68,7 @@ class Pompe
         }
     }
 
-    public function donnerEssence(Vehicule $v)
+    public function donnerEssence(Vehicule $v) // on exige un argument de type Vehicule 
     {
         //                             800                - (50 - 5) = 755
         $this->setlitresEssence($this->getlitresEssence() - (50 - $v->getlitresEssence()));
