@@ -36,3 +36,20 @@ class Homme
         return $this->nom;
     }
 }
+
+$homme1 = new Homme();
+var_dump($homme1);
+echo '<br>';
+$homme1->setPrenom("Julien"); // je modifie l'élément dans l'objet.
+echo "Homme 1 a pour prénom : " . $homme1->getPrenom() . " . <br>"; // j'accède à l'élément de l'objet
+// petit exo donner le nom Cottet a $homme1 et afficher le nom.
+$homme1->setNom("Cottet"); // je modifie l'élément dans l'objet
+echo "Homme 1 a pour nom : " . $homme1->getNom() . " . <br>"; // j'accède à l'élément de l'objet
+
+$homme2 = new Homme();
+echo " Prenom : " . $homme2->getPrenom();
+var_dump($homme2);
+// Comme on a instancié un nouvel objet Homme avec $homme2
+// les propriétés de $homme2 sont NULL car les changements de valeurs avec les setter ne s'applique qu'à un seul objet
+// nous avons appliqué setPrenom et setNom uniquement à $homme1 donc seul $homme1 a vu ses propriétés changeait de valeur
+// $homme2 n'est pas concerné par les settes appliqués sur $homme1
