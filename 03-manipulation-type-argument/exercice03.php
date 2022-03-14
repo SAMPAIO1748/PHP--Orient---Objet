@@ -12,7 +12,6 @@
  * 
  * 
  * 
- * 
  * -------------------------
  * Pompe
  * -------------------------
@@ -35,3 +34,59 @@
  * 
  * Quand vous avez fini mettre fini dans le chat.
  */
+
+class Vehicule
+{
+    private $litresEssence;
+
+    public function getlitresEssence()
+    {
+        return $this->litresEssence;
+    }
+
+    public function setlitresEssence($litres)
+    {
+        if (is_int($litres) && $litres <= 50) {
+            $this->litresEssence = $litres;
+        }
+    }
+}
+
+class Pompe
+{
+    private $litresEssence;
+
+    public function getlitresEssence()
+    {
+        return $this->litresEssence;
+    }
+
+    public function setlitresEssence($litres)
+    {
+        if (is_int($litres)) {
+            $this->litresEssence = $litres;
+        }
+    }
+
+    public function donnerEssence(Vehicule $v)
+    {
+        //                             800                - (50 - 5) = 755
+        $this->setlitresEssence($this->getlitresEssence() - (50 - $v->getlitresEssence()));
+
+        $v->setlitresEssence(50);
+    }
+}
+
+$vehicule1 = new Vehicule;
+$vehicule1->setlitresEssence(5);
+echo "Le vehicule 1 a " . $vehicule1->getlitresEssence() . ' litres d\'essence';
+echo '<br>';
+$pompe = new Pompe;
+$pompe->setlitresEssence(800);
+echo "La pompe a " . $pompe->getlitresEssence() . " litres d'essence";
+
+$pompe->donnerEssence($vehicule1);
+echo '<br>';
+echo "Après ravitallement, la pompe a " . $pompe->getlitresEssence() . " litres d'essence";
+
+echo "<br>Le vehicule 1 a, après ravitaillement, " . $vehicule1->getlitresEssence() . ' litres d\'essence';
