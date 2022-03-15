@@ -42,4 +42,4 @@ var_dump($admin->mdp);
 echo "<hr>";
 $membre = new Membre;
 // $membre->accessBackOffice(); // impossible car Admin hérite de Membre donc Admin a accés à tout le code de Membre 
-//mais ce n'est pas réciproque Membre n'hérite pas de Admin donc il n'a pas accés au code de la class Admin.
+// mais ce n'est pas réciproque Membre n'hérite pas de Admin donc il n'a pas accés au code de la class Admin.
