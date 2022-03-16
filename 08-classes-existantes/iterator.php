@@ -42,3 +42,23 @@ while ($it2->valid()) {
 }
 
 echo "<hr>";
+
+//-------------------------------------------------
+
+$it3 = new SimpleXMLIterator('fichier.xml', NULL, TRUE);
+
+//var_dump($it3);
+
+//print '<pre>';
+//print_r(get_class_methods($it3));
+//print '<pre>';
+
+$it3->rewind();
+
+while ($it3->valid()) {
+
+    echo $it3->key() . ' - ' . $it3->current() . '<br>';
+    $it3->next();
+}
+
+echo "<hr>";
