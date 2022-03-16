@@ -1,16 +1,13 @@
 <?php
 
-class Vehicule
+abstract class Vehicule
 {
-    public function demarrer()
+    final public function demarrer()
     {
         return 'je demarre';
     }
 
-    public function carburant()
-    {
-        return;
-    }
+    abstract public function carburant();
 
     public function nombreDeTesteObligatoire()
     {
@@ -18,12 +15,30 @@ class Vehicule
     }
 }
 
-class Peugeot
+class Peugeot extends Vehicule
 {
+    public function carburant()
+    {
+        return "essence";
+    }
+
+    public function nombreDeTesteObligatoire()
+    {
+        return parent::nombreDeTesteObligatoire() + 70;
+    }
 }
 
-class Renault
+class Renault extends Vehicule
 {
+    public function carburant()
+    {
+        return "diesel";
+    }
+
+    public function nombreDeTesteObligatoire()
+    {
+        return parent::nombreDeTesteObligatoire() + 30;
+    }
 }
 
 /**
@@ -34,3 +49,14 @@ class Renault
  * 5. La Peugeot doit effectuer 70 tests supplémentaires qu'un Vehicule de base.
  * 6. Effectuer les affichages necessaire.
  */
+
+
+$peugeot = new Peugeot;
+echo "Peugeot : " . $peugeot->demarrer() . "<br>";
+echo "Peugeot : " . $peugeot->carburant() . "<br>";
+echo "Peugeot : " . $peugeot->nombreDeTesteObligatoire() . "<hr>";
+
+$renault = new Renault;
+echo "Renault : " . $renault->demarrer() . "<br>";
+echo "Renault : " . $renault->carburant() . "<br>";
+echo "Renault : " . $renault->nombreDeTesteObligatoire() . "<hr>";
