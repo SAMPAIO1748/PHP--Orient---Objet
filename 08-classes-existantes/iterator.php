@@ -62,3 +62,28 @@ while ($it3->valid()) {
 }
 
 echo "<hr>";
+
+
+//------------------------------------------------------
+
+class Listing
+{
+    public function getListing($it)
+    {
+        $it->rewind();
+
+        while ($it->valid()) {
+            echo $it->key() . " - " . $it->current() . "<br>";
+            $it->next();
+        }
+
+        echo "<hr>";
+    }
+}
+
+echo "<hr>";
+
+$listing = new Listing;
+$listing->getListing($it1);
+$listing->getListing($it2);
+$listing->getListing($it3);
