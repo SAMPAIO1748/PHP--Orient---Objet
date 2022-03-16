@@ -87,3 +87,13 @@ $listing = new Listing;
 $listing->getListing($it1);
 $listing->getListing($it2);
 $listing->getListing($it3);
+
+/************************
+ * 
+ * $it->rewind() : permet de se placer au début du fichier/array/dossier
+ * $it->valid() : permet de vérifier si il y a encore des entrées/informaations à parcourir.
+ * $it->key() : affiche l'indice/la clé.
+ * $it->current() : affichage de la valeur/du contenu
+ * $it->next() : passe à l'élément suivant
+ * 
+ ************************/
