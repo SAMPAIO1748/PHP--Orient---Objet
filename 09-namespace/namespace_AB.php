@@ -26,3 +26,7 @@ namespace B {
         return "Bruxelles";
     }
 }
+
+//echo B\ville();
+// Erreur fatal, on ne peut pas mettre du code après avoir définis des namespaces.
+// il faut donc créer des fichier d'appel.
