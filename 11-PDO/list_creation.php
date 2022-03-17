@@ -53,7 +53,9 @@
             <?php
 
             foreach ($resultat as $creation) {
-                echo "<tr><td>" . $creation['titre'] . "</td><td>" .
+                echo "<tr><td><a href='show_creation.php?id=" .
+                    $creation['id'] . "'>" .
+                    $creation['titre'] . "</a></td><td>" .
                     $creation['description'] . "</td><td>" .
                     $creation['galerie'] . '</td><td>' .
                     $creation['date_creation']  . "</td></tr>";
