@@ -17,3 +17,5 @@ $requete->bindValue(':date', date('Y-m-d'), PDO::PARAM_STR); // Attribution de l
 $requete->execute(); // Exécution de la requête
 
 header('Location: list_creation.php'); // redirection vers la page list_creation.php
+
+// Exercice faire le Create pour genre.
