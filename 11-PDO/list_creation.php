@@ -33,9 +33,47 @@
      * PDO::FETCH_ASSOC fait que le tableau final est un tableau associatif
      */
 
-    var_dump($resultat);
+    //var_dump($resultat);
 
     ?>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Gallerie</th>
+                <th>Date de création</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <?php
+
+            foreach ($resultat as $creation) {
+                echo "<tr><td>" . $creation['titre'] . "</td><td>" .
+                    $creation['description'] . "</td><td>" .
+                    $creation['galerie'] . '</td><td>' .
+                    $creation['date_creation']  . "</td></tr>";
+            }
+
+            ?>
+
+        </tbody>
+
+    </table>
+
+
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: black solid 2px;
+        }
+    </style>
 
 
 </body>
