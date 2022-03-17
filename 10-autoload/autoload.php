@@ -14,5 +14,7 @@ spl_autoload_register("inclusionAutomatique");
 
 /**
  * spl_autoload_register : permet d'exécuter une fonction lorsque l'interpréteur va passer sur un "new" dans le code.
- * Le nom de la classe après le "new" sera récupéré et transmis à la fonction mise en argument de la fonction spl_autoload_register. 
+ * Le nom de la classe après le "new" sera récupéré et transmis à la fonction mise en argument de la fonction spl_autoload_register.
+ * Il est indispensable de respecter une convention de nommage des fichiers qui contiennent le code des classes si l'on veut
+ * que l'autoload focntionne.
  */
