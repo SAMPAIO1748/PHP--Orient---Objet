@@ -29,7 +29,7 @@
 
     $resultat = $requete->fetchAll(PDO::FETCH_ASSOC);
     /**
-     * Mise sous forme de tableau du résultat grâce à fetchAll(), qui récupère toutes les entrés de requête et les ranges dans un tableau
+     * Mise sous forme de tableau du résultat grâce à fetchAll(), qui récupère toutes les entrés de requête et les range dans un tableau
      * PDO::FETCH_ASSOC fait que le tableau final est un tableau associatif
      */
 

@@ -31,6 +31,8 @@
     //var_dump($resultat);
 
 
+
+
     ?>
 
     <table>
@@ -63,5 +65,7 @@
     </style>
 
 </body>
+
+
 
 </html>
