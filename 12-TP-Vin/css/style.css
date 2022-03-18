@@ -1,0 +1,54 @@
+h1 {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  text-align: center;
+}
+table,
+th,
+td {
+  border: 2px solid black;
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.title {
+  text-align: center;
+}
+
+.input {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding-bottom: 1%;
+}
+
+form {
+  width: 30%;
+  margin: 0 auto;
+}
+
+h3 {
+  border: solid black 5px;
+  width: 20%;
+  margin: 1% auto;
+  text-align: center;
+}
+
+.dnone {
+  display: none;
+}
+
+img {
+  height: 10vh;
+  width: auto;
+}
