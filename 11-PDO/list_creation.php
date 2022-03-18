@@ -45,6 +45,8 @@
                 <th>Description</th>
                 <th>Gallerie</th>
                 <th>Date de création</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
             </tr>
         </thead>
 
@@ -58,7 +60,9 @@
                     $creation['titre'] . "</a></td><td>" .
                     $creation['description'] . "</td><td>" .
                     $creation['galerie'] . '</td><td>' .
-                    $creation['date_creation']  . "</td></tr>";
+                    $creation['date_creation']  . "</td><td><a href='update_form_creation.php?id=" .
+                    $creation['id'] . "'>Modifier la création</a></td><td><a href='delete_creation.php?id=" .
+                    $creation['id'] . "'>Supprimer la création</a></td></tr>";
             }
 
             ?>
